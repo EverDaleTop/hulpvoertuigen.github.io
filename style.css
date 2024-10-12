@@ -3,6 +3,64 @@ body{
     background-size: 100%, 440%;
 }
 
+/* Animations */
+/* .hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 0.5s;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+} */
+
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: rgba(46, 46, 46, 1);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(22, 22, 22);
+  }
+
+.button-primary{
+    background-color: rgb(26, 115, 232);
+    background-image: none;
+    border: none;
+
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    cursor: pointer;
+
+    border-radius: 2rem;
+}
+
+.button-primary:hover{
+    background-color: rgb(63, 141, 243);
+}
+
+.button-primary:active{
+    background-color: rgb(18, 92, 189);
+}
 
 /* Header */
 .header{
@@ -21,12 +79,19 @@ body{
 
 .header-item{
     color: #B4B4B4;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
 
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
     font-size: 0.9rem;
     padding-left: 0.7rem;
     padding-right: 0.7rem;
+}
+
+.header-item:hover{
+    color: rgb(18, 92, 189);
 }
 
 /* Title */
@@ -36,7 +101,7 @@ body{
     align-items: center;
     margin-top: 1rem;
 
-    height: 8rem;
+    height: 100%;
 }
 
 #title-title{
@@ -65,22 +130,31 @@ body{
 /* Search box */
 #title-search{
     display: flex;
+    width: 40% ;
+    height: 4rem;
+    padding: 1rem;
+}
+
+#title-search input{
+    display: flex;
     justify-content: space-between;
     align-items: center;
+
+    border: none;
 
     background-color: rgba(50, 50, 50, 0.65);
     color: #B3B3B3;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
     font-size: 1rem;
-    text-align: center;
+    text-align: left;
 
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 1rem;
     padding-right: 1rem;
 
-    width: 35%;
+    width: 100%;
 
     margin-top: 1rem;
     border-radius: 2rem;
@@ -89,59 +163,81 @@ body{
 }
 
 #title-search button{
-    background-color: rgb(26, 115, 232);
-    background-image: none;
-    border: none;
+    margin-top: 1rem;
+    margin-left: 1rem;
 
+    width: 50%;
     box-shadow: 0px 0px 10px 0px rgba(26, 115, 232, 0.9);
+}
 
+/* Images */
+.image-container{
+    display: flex;
+    /* flex-direction: column; */
+    align-content: center;
+    justify-content: center;    
+    overflow: hidden;
+
+    padding-top: 2rem;
+}
+
+.title-images{
+    display: flex;
+    width: 500px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background-color: #B4B4B4;
+
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+
+    aspect-ratio: 16/9;
+}
+
+/* Info page */
+.infopage{
+    padding-top: 3rem;
+}
+
+.info-title{
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500;
-    font-size: 1rem;
-    text-align: center;
-
-    padding-top: 0.4rem;
-    padding-bottom: 0.4rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-
-    margin-left: 3rem;
-
-    border-radius: 2rem;
+    font-weight: 700;
+    font-size: 4.3rem;
 }
 
-#title-of{
+.info-p{
     color: #B4B4B4;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    text-align: center;
+    font-weight: 500;
+    font-size: 2rem;
 
-    margin-top: 0.8rem;
-    margin-bottom: 0.8rem;
+    margin-top: 1rem;
+    width: 80%;
 }
 
-.title-listbutton{
-    background-color: rgba(26, 115, 232, 0.2);
-    border: 2px solid #1A73E8;
-    /* border-width: 2px solid; */
-    /* border-color: #1A73E8; */
-    border-radius: 2rem;
+#info-loc{
+    width: 50%;
+    padding-left: 2rem;
+}
 
-    color: #1A73E8;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500;
-    font-size: 1rem;
-    text-align: center;
+#info-trust{
+    width: 50%;
+    float: right;
+    padding-right: 2rem;
+}
 
-    padding-top: 0.4rem;
-    padding-bottom: 0.4rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+#p{
+    text-align: right;
+    float: right;
+}
 
-    margin-left: 0.3rem;
-    margin-right: 0.3rem;
+#t{
+    text-align: right;
 }
 
 @media only screen and (max-width: 600px){
@@ -149,6 +245,10 @@ body{
         font-size: 0.7rem;
         padding-left: 0.4rem;
         padding-right: 0.4rem;
+    }
+
+    .button-primary{
+        font-size: 0.7rem;
     }
 
     #title-subtitle{
@@ -165,44 +265,71 @@ body{
     }
 
     /* Search box */
-    #title-search{
+    #title-search input{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        border: none;
+    
+        background-color: rgba(50, 50, 50, 0.65);
+        color: #B3B3B3;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 500;
         font-size: 0.7rem;
+        text-align: left;
     
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
         padding-left: 1rem;
         padding-right: 1rem;
     
-        width: 60%;
+        width: 100%;
     
         margin-top: 1rem;
         border-radius: 2rem;
+    
+        box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.4);
+    }    
+
+    #title-search{
+        display: flex;
+        width: 75% ;
+        height: 3rem;
     }
 
     #title-search button{
-        font-size: 0.7rem;
-        text-align: center;
+        margin-top: 1rem;
+        margin-left: 1rem;
     
-        padding-top: 0.4rem;
-        padding-bottom: 0.4rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
-    
-        margin-left: 3rem;
-    
-        border-radius: 2rem;
+        width: 50%;
+        box-shadow: 0px 0px 10px 0px rgba(26, 115, 232, 0.9);
     }
 
-    .title-listbutton{
-        font-size: 0.8rem;
-        text-align: center;
     
-        padding-top: 0.4rem;
-        padding-bottom: 0.4rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
+    .title-images{
+        border-radius: 5px;
+    }
+
+    /* Info page */
+    .infopage{
+        padding-top: 3rem;
+    }
     
-        margin-left: 0.3rem;
-        margin-right: 0.3rem;
+    .info-title{
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        font-size: 2rem;
+    }
+    
+    .info-p{
+        color: #B4B4B4;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 500;
+        font-size: 1rem;
+    
+        margin-top: 1rem;
+        width: 80%;
     }
 }
