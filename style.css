@@ -282,8 +282,7 @@ body{
 #cards-container{
     width: 90%;
     height: 100%;
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin: 3rem;
 
     display: flex;
     flex-wrap: wrap;
@@ -501,6 +500,10 @@ body{
     height: 1.2rem;
 }
 
+#send-button{
+    margin-top: 1rem;
+}
+
 /* Diff screens */
 @media(prefers-reduced-motion){
     .hidden{
@@ -612,12 +615,12 @@ body{
     }
 
     #cards-container{
-        margin-left: 2rem;
+        margin: 1.5rem;
     }
 
     .card{
-        width: 25%;
-        height: 10rem;
+        width: 40%;
+        height: 15rem;
         font-size: 0.8rem;
         margin: 0.5rem;
     }
@@ -647,5 +650,18 @@ body{
     .footer{
         margin-top: 1.5rem;
         padding: 0.5rem;
+    }
+
+    /* CONTACT PAGE */
+    #form{
+        width: 90%;
+    }
+
+    .input{
+        width: 83%;
+    }
+
+    #send-button{
+        font-size: 1rem;
     }
 }
