@@ -750,4 +750,13 @@ body{
     #send-button{
         font-size: 1rem;
     }
+
+    /* Success popup */
+    .popup{
+        width: 60%;
+    }
+
+    #popup-b{
+        font-size: 1rem;
+    }
 }
