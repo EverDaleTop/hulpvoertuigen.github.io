@@ -388,6 +388,7 @@ body{
 #naam{
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 #message input{
@@ -397,7 +398,7 @@ body{
 .input{
     display: flex;
     flex-direction: column;
-    width: 88%;
+    width: 96%;
 
     margin: 0 0.5rem 1rem 0.5rem;
 }
@@ -740,6 +741,10 @@ body{
 
     .input{
         width: 83%;
+    }
+
+    .name-input{
+        width: 40%;
     }
 
     #send-button{
