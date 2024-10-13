@@ -123,7 +123,7 @@ body{
 #title-subtitle{
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 650;
+    font-weight: 500;
     font-size: 3rem;
     text-align: center;
 
@@ -163,7 +163,14 @@ body{
     margin-top: 1rem;
     border-radius: 2rem;
 
+    transition: 150ms;
+
     box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.4);
+}
+
+#title-search input:focus{
+    outline: none;
+    border: 1px solid rgb(18, 92, 189);
 }
 
 #title-search button{
@@ -361,6 +368,137 @@ body{
     padding: 1rem;
 
     margin-top: 3rem;
+}
+
+/* CONTACT PAGE */
+#contact{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+#form{
+    display: flex;
+    flex-direction: column  ;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+
+#naam{
+    display: flex;
+    justify-content: center;
+}
+
+#message input{
+    height: 3rem;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    width: 88%;
+
+    margin: 0 0.5rem 1rem 0.5rem;
+}
+
+.input-label{
+    margin-bottom: 0.5rem;
+}
+
+.input-title{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+.input-optio{
+    color: #B4B4B4;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+    margin-left: 0.75rem;
+}
+
+.input input{
+    background-color: #323232;
+    border: 1px solid #585858;
+    border-radius: 4px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+
+    caret-color: white;
+
+    transition: 150ms;
+}
+
+.input input:focus{
+    outline: none;
+    border: 1px solid rgb(18, 92, 189);
+}
+
+.input textarea{
+    background-color: #323232;
+    border: 1px solid #585858;
+    border-radius: 4px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+    transition: 150ms;
+    caret-color: white;
+
+    height: 5rem;
+
+    width: 93%;
+    transform: translateX(-2%);
+    resize: none;
+}
+
+.input textarea:focus{
+    outline: none;
+    border: 1px solid rgb(18, 92, 189);
+}
+
+#reden{
+    width: 87%;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.input-radio{
+    display: flex;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.input-radio input{
+    margin-right: 0.5rem;
+}
+
+.radio-container{
+    display: flex;
+    position: relative;
+    margin-top: 0.75rem;
+    cursor: pointer;
+
+    align-items: center;
+
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+.radio-container input{
+    margin-right: 0.5rem;
+    width: 1.2rem;
+    height: 1.2rem;
 }
 
 /* Diff screens */
