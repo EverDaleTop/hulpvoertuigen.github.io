@@ -1,91 +1,513 @@
-<!DOCTYPE html>
-<html lang="nl">
+body{
+    background-image: url(Images/BG.png);
+    background-size: 100%, 440%;
+}
+
+/* Animations */
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(-10%);
+    transition: all 0.5s;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: rgba(46, 46, 46, 1);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(22, 22, 22);
+  }
+
+.button-primary{
+    background-color: rgb(26, 115, 232);
+    background-image: none;
+    border: none;
+
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    cursor: pointer;
+
+    border-radius: 2rem;
+
+    transition: 150ms;
+}
+
+.button-primary:hover{
+    background-color: rgb(63, 141, 243);
+    scale: 1.1;
+}
+
+.button-primary:active{
+    background-color: rgb(18, 92, 189);
+}
+
+/* Header */
+.header{
+    display: flex;
+    justify-content: end;
+    margin-top: 1rem;
+}
+
+.header-buttons{
+    display: flex;
+    flex-direction: row;
+
+    position: relative;
+    justify-content: end;
+}
+
+.header-item{
+    color: #B4B4B4;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-left: 1.4rem;
+
+    transition: 150ms;
+}
+
+.header-item:hover{
+    color: rgb(18, 92, 189);
+}
+
+/* Title */
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+
+    height: 100%;
+}
+
+#title-title{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 4.3rem;
+    margin-top: -1rem;
+} 
+
+#title-logo{
+    height: 4rem;
+}
+
+#title-subtitle{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 650;
+    font-size: 3rem;
+    text-align: center;
+
+    margin-top: 0.5rem;
+    width: 70%;
+}
+
+/* Search box */
+#title-search{
+    display: flex;
+    width: 40% ;
+    height: 4rem;
+    padding: 1rem;
+}
+
+#title-search input{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: none;
+
+    background-color: rgba(50, 50, 50, 0.65);
+    color: #B3B3B3;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: left;
+
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    width: 100%;
+
+    margin-top: 1rem;
+    border-radius: 2rem;
+
+    box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.4);
+}
+
+#title-search button{
+    margin-top: 1rem;
+    margin-left: 1rem;
+
+    width: 50%;
+    box-shadow: 0px 0px 10px 0px rgba(26, 115, 232, 0.9);
+}
+
+/* Images */
+.image-container{
+    display: flex;
+    /* flex-direction: column; */
+    align-content: center;
+    justify-content: center;    
+    overflow: hidden;
+
+    padding-top: 2rem;
+}
+
+.title-images{
+    display: flex;
+    width: 500px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background-color: #B4B4B4;
+
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+
+    aspect-ratio: 16/9;
+}
+
+/* Info page */
+.infopage{
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    /* height: 100%; */
+}
+
+.info-title{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 4.3rem;
+
+    width: 50%;
+}
+
+.info-p{
+    color: #B4B4B4;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+
+    width: 40%;
+
+    margin-top: 1rem;
+}
+
+#info-loc{
+    padding-left: 2rem;
+    height: 50%;
+}
+
+#info-trust{
+    float: right;
+    padding-right: 2rem;
+    height: 50%;
+}
+
+#p{
+    float: right;
+    text-align: right;
+}
+
+#t{
+    transform: translateX(100%);
+    text-align: right;
+}
+
+.cardspage{
+    margin-top: 3rem;
+}
+
+#cards-header{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 4.3rem;
+    text-align: center;
+}
+
+#cards-subheading{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 3.3rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#cards-container{
+    width: 90%;
+    height: 100%;
+    margin-left: 3rem;
+    margin-right: 3rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #323232;
+
+    cursor: pointer;
+    position: relative;
+
+    width: 20%;
+    height: 20rem;
+    background-color: #131313;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+
+    box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+
+    margin: 1rem;
+
+    overflow: hidden;
+
+    transition: 150ms;
+}
+
+.card:hover{
+    scale: 1.05;
+}
+
+/* Bottom page */
+.bottom-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#bottom-t{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 2.8rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#bottom-p{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 1rem;
+
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.bottom-page button{
+    font-size: 1.5rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+/* footer */
+.footer{
+    display: flex;
+    justify-content: end;
+    background-color: #323232;
+    bottom: 100%;
+    padding: 1rem;
+
+    margin-top: 3rem;
+}
+
+/* Diff screens */
+@media(prefers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .header-item{
+        font-size: 0.7rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+
+    .button-primary{
+        font-size: 0.7rem;
+    }
+
+    #title-subtitle{
+        font-size: 1.5rem;
+    }
+
+    #title-title{
+        font-size: 2rem;
+        margin-top: -0.5rem;
+    }
+
+    #title-logo{
+        height: 2rem;
+    }
+
+    /* Search box */
+    #title-search input{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="app.js"></script>
-</head>
-<body>
-
-    <!-- Homepage -->
-    <section class="homepage">
-
-        <!-- Header -->
-        <header class="header">
-            <div class="header-buttons">
-                <button class="header-item">FAQ</button>
-                <button class="header-item">API</button>
-                <button class="header-item">Contact</button>
-            </div>
-        </header>
+        border: none;
     
-        <!-- Title/Search -->
-        <div class="title hidden">
-            <div ><img  id="title-logo" src="Images/Logos/LogoGradient.png" alt=""></div>
-            <div id="title-title">Hulpvoertuigen</div>
-            <div id="title-subtitle">De beste hulpvoertuigen database voor de benelux</div>
-            <div id="title-search">
-                <input type="text" placeholder="Zoek een adres">
-                <button class="button-primary">Zoek nu!</button>
-            </div>
-        </div>
+        background-color: rgba(50, 50, 50, 0.65);
+        color: #B3B3B3;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 500;
+        font-size: 0.7rem;
+        text-align: left;
     
-        <!-- Images -->
-        <div class="image-container hidden">
-            <div class="title-images">16/9</div>
-            <div class="title-images">16/9</div>
-            <div class="title-images">16/9</div>
-        </div>
-    </section>
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    
+        width: 100%;
+    
+        margin-top: 1rem;
+        border-radius: 2rem;
+    
+        box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.4);
+    }    
 
-    <!-- Info page -->
-    <section class="infopage hidden">
-        <div id="info-loc">
-            <div class="info-title">Voor Nederland en België!</div>
-            <div class="info-p">De lijst behoud informatie voor Nederland en België en is daardoor de beste database voor hulpvoertuigen in de benelux</div>
-        </div>
+    #title-search{
+        display: flex;
+        width: 75% ;
+        height: 3rem;
+    }
 
-        <div id="info-trust">
-            <div id="t" class="info-title">Betrouwbare informatie</div>
-            <div id="p" class="info-p">De meest betrouwbare informatie wordt weergegeven op deze website, deze informatie komt van meerdere bronnen</div>
-        </div>
-    </section>
+    #title-search button{
+        margin-top: 1rem;
+        margin-left: 1rem;
+    
+        width: 50%;
+        box-shadow: 0px 0px 10px 0px rgba(26, 115, 232, 0.9);
+    }
 
-    <!-- Cards page -->
-     <section class="cardspage hidden">
-        <div id="cards-header">Hulpdiensten</div>
-        <div id="cards-subheading">Op de lijst</div>
-        <div id="cards-container">
-           <button class="card hidden">Politie</button>
-           <button class="card hidden">Brandweer</button>
-           <button class="card hidden">Ambulance</button>
-           <button class="card hidden">Reddingsbrigade</button>
-           <button class="card hidden">KNRM</button>
-           <button class="card hidden">ProRail</button>
-           <button class="card hidden">Rijkswaterstaat</button>
-           <button class="card hidden">Ziekenhuizen</button>
-           <button class="card hidden">Scholen</button>
-           <button class="card hidden">Meldkamers</button>
-           <button class="card hidden">Provincies</button>
-        </div>
-     </section>
+    
+    .title-images{
+        border-radius: 5px;
+    }
 
-     <section class="bottom-page">
-        <div id="bottom-t" class="hidden">Iets niet op de lijst?</div>
-        <div id="bottom-p" class="hidden">Of aanpassingen nodig?</div>
-        <button class="button-primary hidden">Neem contact op!</button>
-     </section>
+    /* Info page */
+    .infopage{
+        padding-top: 3rem;
+    }
+    
+    .info-title{
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        font-size: 2rem;
+    }
+    
+    .info-p{
+        color: #B4B4B4;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 500;
+        font-size: 1rem;
+    
+        margin-top: 1rem;
+        width: 80%;
+    }
 
-     <footer class="footer">
-        <div class="header-buttons">
-            <button class="header-item">FAQ</button>
-            <button class="header-item">API</button>
-            <button class="header-item">Contact</button>
-        </div>
-    </footer>
+    /* Cards page */
+    #cards-header{
+        font-size: 2rem;
+    }
 
-</body>
-</html>
+    #cards-subheading{
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+    }
+
+    #cards-container{
+        margin-left: 2rem;
+    }
+
+    .card{
+        width: 25%;
+        height: 10rem;
+        font-size: 0.8rem;
+        margin: 0.5rem;
+    }
+
+    #bottom-t{
+        font-size: 1.4rem;
+        margin-top: 0.5rem;
+    }
+    
+    #bottom-p{
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    
+        margin-top: 0.25rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .bottom-page button{
+        font-size: 0.75rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        padding-right: 0.75rem;
+        padding-left: 0.75rem;
+    }
+
+    /* Footer */
+    .footer{
+        margin-top: 1.5rem;
+        padding: 0.5rem;
+    }
+}
