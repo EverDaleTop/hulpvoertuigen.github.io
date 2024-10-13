@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <!-- <script defer src="app.js"></script> -->
+    <script defer src="app.js"></script>
 </head>
 <body>
 
@@ -14,16 +14,16 @@
     <section class="homepage">
 
         <!-- Header -->
-        <div class="header">
+        <header class="header">
             <div class="header-buttons">
                 <button class="header-item">FAQ</button>
                 <button class="header-item">API</button>
                 <button class="header-item">Contact</button>
             </div>
-        </div>
+        </header>
     
         <!-- Title/Search -->
-        <div class="title">
+        <div class="title hidden">
             <div ><img  id="title-logo" src="Images/Logos/LogoGradient.png" alt=""></div>
             <div id="title-title">Hulpvoertuigen</div>
             <div id="title-subtitle">De beste hulpvoertuigen database voor de benelux</div>
@@ -53,6 +53,39 @@
             <div id="p" class="info-p">De meest betrouwbare informatie wordt weergegeven op deze website, deze informatie komt van meerdere bronnen</div>
         </div>
     </section>
+
+    <!-- Cards page -->
+     <section class="cardspage hidden">
+        <div id="cards-header">Hulpdiensten</div>
+        <div id="cards-subheading">Op de lijst</div>
+        <div id="cards-container">
+           <button class="card hidden">Politie</button>
+           <button class="card hidden">Brandweer</button>
+           <button class="card hidden">Ambulance</button>
+           <button class="card hidden">Reddingsbrigade</button>
+           <button class="card hidden">KNRM</button>
+           <button class="card hidden">ProRail</button>
+           <button class="card hidden">Rijkswaterstaat</button>
+           <button class="card hidden">Ziekenhuizen</button>
+           <button class="card hidden">Scholen</button>
+           <button class="card hidden">Meldkamers</button>
+           <button class="card hidden">Provincies</button>
+        </div>
+     </section>
+
+     <section class="bottom-page">
+        <div id="bottom-t" class="hidden">Iets niet op de lijst?</div>
+        <div id="bottom-p" class="hidden">Of aanpassingen nodig?</div>
+        <button class="button-primary hidden">Neem contact op!</button>
+     </section>
+
+     <footer class="footer">
+        <div class="header-buttons">
+            <button class="header-item">FAQ</button>
+            <button class="header-item">API</button>
+            <button class="header-item">Contact</button>
+        </div>
+    </footer>
 
 </body>
 </html>
