@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+<body>
+
+    <!-- Homepage -->
+    <section class="homepage">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="header-buttons">
+                <a href="index.html">
+                    <button class="button-primary">Home</button>
+                </a>
+                <button class="header-item">FAQ</button>
+                <button class="header-item">API</button>
+            </div>
+        </header>
+    
+        <!-- Title/Search -->
+        <div class="title hidden">
+            <div ><img  id="title-logo" src="Images/Logos/LogoGradient.png" alt=""></div>
+            <div id="title-title">Hulpvoertuigen</div>
+            <div id="title-subtitle">Neem contact op</div>
+        </div>
+    </section>
+
+    <!-- Form -->
+    <section id="contact">
+        <div id="form">
+            <div id="naam">
+
+                <div class="input hidden">
+                    <div class="input-label">
+                        <label class="input-title" for="">Voornaam</label>
+                        <label class="input-optio">(optioneel)</label>
+                    </div>
+                    <input type="text" placeholder="Peter">
+                </div>
+
+                <div class="input hidden">
+                    <div class="input-label">
+                        <label class="input-title" for="">Achternaam</label>
+                        <label class="input-optio">(optioneel)</label>
+                    </div>
+                    <input type="text" placeholder="Boer">
+                </div>
+                
+            </div>
+
+            <div class="input hidden">
+                <div class="input-label">
+                    <label class="input-title" for="">E-mail</label>
+                    <label class="input-optio">(optioneel)</label>
+                </div>
+                <input type="text" placeholder="jouw@domain.com">
+            </div>
+
+            <div class="input hidden">
+                <div class="input-label">
+                    <label class="input-title" for="">Telefoon nummer</label>
+                    <label class="input-optio">(optioneel)</label>
+                </div>
+                <input type="text" placeholder="+31 06 123 456">
+            </div>
+
+            <div class="input hidden" id="message">
+                <div class="input-label">
+                    <label class="input-title" for="">Bericht</label>
+                </div>
+
+                <textarea name="" id="" class="input" placeholder="Laat een bericht achter..."></textarea>
+            </div>
+
+            <div id="reden">
+
+                <label class="input-title">Reden</label>
+
+                <label class="radio-container">
+                    <input class="radio-button" type="radio" checked="checked" name="reden">
+                    Ik heb een vraag
+                </label>
+
+                <label class="radio-container">
+                    <input class="radio-button" type="radio" name="reden">
+                    Ontbrekende informatie
+                </label>
+
+                <label class="radio-container">
+                    <input class="radio-button" type="radio" name="reden">
+                    Informatie moet bijgewerkt worden
+                </label>
+                
+            </div>
+        </div>
+        
+    </section>
+
+</body>
+</html>
