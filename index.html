@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="stylee.css">
         <script defer src="app.js"></script>
     </head>
     <body>
@@ -15,82 +15,98 @@
 
             <!-- Header -->
             <header class="header">
-                <div class="header-buttons">
-                    <button class="header-item">FAQ</button>
-                    <button class="header-item">API</button>
+
+                <!----Buttons---->
+                <nav id="nav-container">
+
+                    <button class="nav-btn">FAQ</button>
+                    <button class="nav-btn">API</button>
                     <a href="contact.html" >
-                        <button class="header-item">Contact</button>
+                        <button class="nav-btn">Contact</button>
                     </a>
-                </div>
+
+                </nav>
             </header>
         
             <!-- Title/Search -->
             <div class="title hidden">
-                <div ><img  id="title-logo" src="Images/Logos/LogoGradient.png" alt=""></div>
-                <div id="title-title">Hulpvoertuigen</div>
-                <div id="title-subtitle">De beste hulpvoertuigen database voor de benelux</div>
-                <div id="title-search">
-                    <input type="text" placeholder="Zoek een adres">
-                    <button class="button-primary">Zoek nu!</button>
+
+                <!----Title---->
+                <div ><img  id="title_logo" src="Images/Logos/LogoGradient.png" alt=""></div>
+                <h1 class="h1 h--center">Hulpdienstvoertuigen</h1>
+                <h2 class="h2 h--center">De beste hulpvoertuigen database voor de Benelux</h2>
+
+                <!----Search---->
+                <div id="title_search">
+                    <input class="srch-box" type="text" placeholder="Zoek een adres">
+                    <button class="btn btn--glow">Zoek nu!</button>
                 </div>
+
             </div>
         
             <!-- Images -->
             <div class="image-container hidden">
-                <div class="title-images">16/9</div>
-                <div class="title-images">16/9</div>
-                <div class="title-images">16/9</div>
+                <div class="image">16/9</div>
+                <div class="image">16/9</div>
+                <div class="image">16/9</div>
             </div>
         </section>
 
         <!-- Info page -->
         <section class="infopage hidden">
+
+            <!-- Locatie -->
             <div id="info-loc">
-                <div class="info-title">Voor Nederland en België!</div>
-                <div class="info-p">De lijst behoud informatie voor Nederland en België en is daardoor de beste database voor hulpvoertuigen in de benelux</div>
+                <h1 class="h1">Voor Nederland en België!</h1>
+                <div class="body">De lijst behoud informatie voor Nederland en België en is daardoor de beste database voor hulpvoertuigen in de Benelux</div>
             </div>
 
+            <!-- Betrouwbaar -->
             <div id="info-trust">
-                <div id="t" class="info-title">Betrouwbare informatie</div>
-                <div id="p" class="info-p">De meest betrouwbare informatie wordt weergegeven op deze website, deze informatie komt van meerdere bronnen</div>
+                <h1 class="h1">Betrouwbare informatie</h1>
+                <div class="body">De meest betrouwbare informatie wordt weergegeven op deze website, deze informatie komt van meerdere bronnen</div>
             </div>
         </section>
 
         <!-- Cards page -->
         <section class="cardspage hidden">
-            <div id="cards-header">Hulpdiensten</div>
-            <div id="cards-subheading">Op de lijst</div>
+            <h1 class="h1 h--center">Hulpdiensten</h1>
+            <h2 class="h2 h--center">Op de lijst</h2>
             <div id="cards-container">
-            <button class="card hidden">Politie</button>
-            <button class="card hidden">Brandweer</button>
-            <button class="card hidden">Ambulance</button>
-            <button class="card hidden">Reddingsbrigade</button>
-            <button class="card hidden">KNRM</button>
-            <button class="card hidden">ProRail</button>
-            <button class="card hidden">Rijkswaterstaat</button>
-            <button class="card hidden">Ziekenhuizen</button>
-            <button class="card hidden">Scholen</button>
-            <button class="card hidden">Meldkamers</button>
-            <button class="card hidden">Provincies</button>
+                <button class="card hidden">Politie</button>
+                <button class="card hidden">Brandweer</button>
+                <button class="card hidden">Ambulance</button>
+                <button class="card hidden">Reddingsbrigade</button>
+                <button class="card hidden">KNRM</button>
+                <button class="card hidden">ProRail</button>
+                <button class="card hidden">Rijkswaterstaat</button>
+                <button class="card hidden">Ziekenhuizen</button>
+                <button class="card hidden">Scholen</button>
+                <button class="card hidden">Meldkamers</button>
+                <button class="card hidden">Provincies</button>
             </div>
         </section>
 
-        <section class="bottom-page">
-            <div id="bottom-t" class="hidden">Iets niet op de lijst?</div>
-            <div id="bottom-p" class="hidden">Of aanpassingen nodig?</div>
+        <section class="bottom_page">
+            <h3 class="h3 h--center hidden">Iets niet op de lijst?</h2>
+            <div class="body h--center hidden">Of aanpassingen nodig?</div>
             <a href="contact.html">
-                <button class="button-primary hidden">Neem contact op!</button>
+                <button class="btn btn--glow hidden">Neem contact op!</button>
             </a>
         </section>
 
         <footer class="footer">
-            <div class="header-buttons">
-                <button class="header-item">FAQ</button>
-                <button class="header-item">API</button>
-                <a href="contact.html">
-                    <button class="header-item">Contact</button>
+
+            <!----Buttons---->
+            <nav id="nav-container">
+
+                <button class="nav-btn">FAQ</button>
+                <button class="nav-btn">API</button>
+                <a href="contact.html" >
+                    <button class="nav-btn">Contact</button>
                 </a>
-            </div>
+
+            </nav>
         </footer>
 
     </body>
