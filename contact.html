@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylee.css">
     <script defer src="app.js"></script>
     <script defer src="popup.js"></script>
 </head>
@@ -13,7 +13,7 @@
     <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player src="https://lottie.host/c3c2b976-6bf4-4874-8a8c-c4656b738dfc/cLKexR24Hv.json" background="##ffffff" speed="1" style="width: 300px; height: 300px" loop controls autoplay direction="1" mode="normal"></lottie-player> -->
 
     <!-- Popup -->
-     <div id="popup-container">
+    <div class="popup_container">
         <div class="popup">
             <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
             <lottie-player src="https://lottie.host/b8943def-05ca-4ee5-8892-d369d23ac4d1/cA4JhE3S84.json" style="height: 45%; width: 100%;" background="##ffffff" speed="2" direction="1" mode="normal"></lottie-player>
@@ -21,94 +21,83 @@
             <div id="popup-p">Bericht is gestuurd!</div>
             <div id="popup-p2">We reageren zo snel als we kunnen. Bedankt!</div>
             <button id="popup-b" class="button-primary">Ok</button>
-         </div>
-     </div>
+        </div>
+    </div>
 
     <!-- Homepage -->
     <section class="homepage">
 
         <!-- Header -->
         <header class="header">
-            <div class="header-buttons">
-                <a href="index.html">
-                    <button class="button-primary">Home</button>
-                </a>
-                <button class="header-item">FAQ</button>
-                <button class="header-item">API</button>
-            </div>
+            <nav id="nav-container">
+
+                <!-- Buttons -->
+                 <a href="index.html">
+                    <button class="btn">Home</button>
+                 </a>
+                <button class="nav-btn">FAQ</button>
+                <button class="nav-btn">API</button>
+
+            </nav>
         </header>
     
         <!-- Title/Search -->
         <div class="title hidden">
-            <div ><img  id="title-logo" src="Images/Logos/LogoGradient.png" alt=""></div>
-            <div id="title-title">Hulpvoertuigen</div>
-            <div id="title-subtitle">Neem contact op</div>
+            <div ><img  id="title_logo" src="Images/Logos/LogoGradient.png" alt=""></div>
+            <h1 class="h1 h--center">Hulpdienstvoertuigen</h1>
+            <h2 class="h2 h--center">Neem contact op</h2>
         </div>
     </section>
 
     <!-- Form -->
     <section id="contact">
         <div id="form">
-            <div id="naam">
 
-                <div class="input hidden name-input">
-                    <div class="input-label">
-                        <label class="input-title">Voornaam</label>
-                    </div>
-                    <input type="text" placeholder="Peter">
-                </div>
-
-                <div class="input hidden name-input">
-                    <div class="input-label">
-                        <label class="input-title">Achternaam</label>
-                    </div>
-                    <input type="text" placeholder="Boer">
-                </div>
-                
+            <!-- Name -->
+            <div class="input_container hidden">
+                <label class="label">Naam</label>
+                <input class="input" type="text" placeholder="Peter Boer">
             </div>
 
-            <div class="input hidden">
-                <div class="input-label">
-                    <label class="input-title">E-mail</label>
-                </div>
-                <input type="text" placeholder="jouw@domain.com">
+            <!-- Email -->
+            <div class="input_container hidden">
+                <label class="label">E-mail</label>
+                <input class="input" type="text" placeholder="jouw@domain.com">
             </div>
 
-            <div class="input hidden">
-                <div class="input-label">
-                    <label class="input-title">Telefoon nummer</label>
-                </div>
-                <input type="text" placeholder="+31 06 123 456">
+            <!-- Phonenumber -->
+            <div class="input_container hidden">
+                <label class="label">Telefoon nummer</label>
+                <input class="input" type="text" placeholder="+31 06 123 456">
             </div>
 
-            <div class="input hidden" id="message">
-                <div class="input-label">
-                    <label class="input-title">Bericht</label>
-                </div>
-
-                <textarea name="" id="" class="input" placeholder="Laat een bericht achter..."></textarea>
+            <!-- Message -->
+            <div class="input_container hidden" id="message">
+                <label class="label">Bericht</label>
+                <textarea class="input input--no-resize" name="" id="textarea" class="input" placeholder="Laat een bericht achter..."></textarea>
             </div>
 
+            <!-- Reason -->
             <div id="reden">
 
-                <label class="input-title">Reden</label>
+                <label class="label">Reden</label>
 
-                <label class="radio-container hidden">
-                    <input class="radio-button" type="radio" checked="checked" name="reden">
-                    Ik heb een vraag
-                </label>
+                <p>
+                    <input type="radio" id="vraag" name="reden" checked>
+                    <label class="label" for="vraag">Ik heb een vraag</label>
+                </p>
 
-                <label class="radio-container hidden">
-                    <input class="radio-button" type="radio" name="reden">
-                    Ontbrekende informatie
-                </label>
+                <p>
+                    <input type="radio" id="info" name="reden">
+                    <label class="label" for="info">Ontbrekende informatie</label>
+                </p>
 
-                <label class="radio-container hidden">
-                    <input class="radio-button" type="radio" name="reden">
-                    Informatie moet bijgewerkt worden
-                </label>
+                <p>
+                    <input type="radio" id="upd" name="reden">
+                    <label class="label" for="upd">Informatie moet bijgewerkt worden</label>
+                </p>
                 
-                <button class="button-primary hidden" id="send-button">Verzend bericht</button>
+                <button class="btn hidden" id="send-button">Verzend bericht</button>
             </div>
         </div>
         
