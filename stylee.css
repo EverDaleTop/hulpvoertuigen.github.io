@@ -1,0 +1,550 @@
+/* RESET */
+:root{
+    --font: Arial, Helvetica, sans-serif;
+    --primary-color: rgb(26, 115, 232);
+}
+
+body{
+    background-image: url(Images/BG.png);
+    background-size: 100%, 440%;
+    overflow-x: hidden;
+}
+
+/* COMPONENTS */
+
+/* Button */
+.btn{
+    background-color: var(--primary-color);
+    background-image: none;
+    border: none;
+
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+
+    padding: 0.4rem 1rem 0.4rem 1rem;
+
+    cursor: pointer;
+
+    border-radius: 2rem;
+
+    transition: 150ms;
+}
+
+.btn:hover{
+    background-color: var(--primary-color);
+    scale: 1.1;
+}
+
+.btn:active{
+    background-color: rgb(18, 92, 189);
+}
+
+/* Nav Button */
+.nav-btn{
+    color: #B4B4B4;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+
+    font-family: var(--font);
+    font-weight: 500;
+    font-size: 0.9rem;
+
+    transition: 150ms;
+
+    cursor: pointer;
+    margin-left: 1.4rem;
+}
+
+.nav-btn:hover{
+    color: rgb(18, 92, 189);
+}
+
+/* Seach box */
+.srch-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: none;
+    background-color: rgba(50, 50, 50, 0.65);
+
+    color: #B3B3B3;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: left;
+
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    width: 100%;
+
+    margin-top: 1rem;
+    border-radius: 2rem;
+
+    transition: 150ms;
+
+    box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.4);
+}
+
+/* Image */
+.image{
+    display: flex;
+    width: 500px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background-color: #B4B4B4;
+
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+
+    aspect-ratio: 16/9;
+}
+
+/* Card */
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #323232;
+
+    cursor: pointer;
+    position: relative;
+
+    width: 20%;
+    height: 30rem;
+    background-color: #131313;
+    color: white;
+    font-family: var(--font);
+    font-weight: 700;
+    font-size: 1.5rem;
+
+    box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+
+    margin: 1rem;
+
+    overflow: hidden;
+
+    transition: 150ms;
+}
+
+.card:hover{
+    scale: 1.05;
+}
+
+/* Input */
+.input{
+    caret-color: white;
+    color: white;
+    background-color: #323232;
+    border: 1px solid #585858;
+    border-radius: 4px;
+    font-family: var(--font);
+
+    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+
+    transition: 150ms;
+    resize: none;
+}
+
+.input:focus{
+    outline: none;
+    border: 1px solid rgb(18, 92, 189);
+}
+
+/* Radio */
+[type="radio"]{
+    opacity: 0;
+}
+
+[type="radio"] + label{
+    position: relative;
+    /* padding-left: 1rem; */
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1.2rem;
+}
+
+[type="radio"] + label::before{
+    content: '';
+    position: absolute;
+    left: -1.7rem;
+    top: 0;
+
+    width: 1.1rem;
+    height: 1.1rem;
+
+    background-color: #323232;
+    border: 1px solid #585858;
+    border-radius: 50%;
+
+    transition: 150ms;
+}
+
+[type="radio"]:hover + label::before{
+    background-color: #2b2b2b;
+}
+
+[type="radio"]:checked + label::before{
+    background-color: #1A73E8;
+    border: 1px solid #81AAE1;
+}
+
+[type="radio"] + label::after{
+    content: '';
+    position: absolute;
+    left: -1.34rem;
+    top: 0.365rem;
+
+    width: 0.5rem;
+    height:0.5rem;
+    opacity: 0;
+
+    background-color: #fff;
+    border-radius: 50%;
+
+    transition: 150ms;
+}
+
+[type="radio"]:checked + label::after{
+    opacity: 1;
+}
+
+/* ELEMENT */
+.h1{
+    color: white;
+    font-family: var(--font);
+    font-weight: 700;
+    font-size: 4.3rem;
+
+    margin: 0;
+}
+
+.h2{
+    color: white;
+    font-family: var(--font);
+    font-weight: 500;
+    font-size: 3rem;
+
+    margin: 0;
+}
+
+.h3{
+    color: white;
+    font-family: var(--font);
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.h--center{
+    text-align: center;
+}
+
+.h2--bold{
+    font-weight: 700;
+}
+
+.body{
+    color: #B4B4B4;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.label{
+    color: white;
+    font-family: var(--font);
+    font-size: 1rem;
+}
+
+/* MODIFIERS */
+.btn--glow{
+    box-shadow: 0px 0px 10px 0px rgba(26, 115, 232, 0.9);
+}
+
+.srch-box--shadow{
+    box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.4);
+}
+
+/* MAIN */
+
+/* Header */
+.header{
+    display: flex;
+    justify-content: end;
+    margin: 1rem 1rem 0 1rem;
+}
+
+/* Footer */
+.footer{
+    display: flex;
+    justify-content: end;
+    background-color: #323232;
+    bottom: 100%;
+    padding: 1rem;
+
+    margin-top: 3rem;
+}
+
+
+/* Title */
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 100%;
+}
+
+.title h1{
+    margin-top: -1rem;
+}
+
+.title h2{
+    width: 70%;
+    margin-top: 0.5rem;
+}
+
+/* Search */
+#title_search{
+    display: flex;
+    width: 40%;
+    height: 4rem;
+    padding: 1rem;
+}
+
+#title_search button{
+    margin: 1rem 0 0 1rem;
+    width: 50%;
+}
+
+/* Images */
+.image-container{
+    display: flex;
+    align-content: center;
+    justify-content: center;    
+    overflow: hidden;
+
+    padding-top: 2rem;
+}
+
+/* Info page */
+.infopage{
+    margin: 2rem;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.infopage div{
+    width: 50%;
+}
+
+.infopage #info-trust{
+    margin-left: auto;
+}
+
+.infopage #info-trust h1{
+    text-align: right;
+    margin-left: auto;
+}
+
+.infopage #info-trust div{
+    text-align: right;
+    margin-left: auto;
+}
+
+/* Cards page */
+#cards-container{
+    width: 90%;
+    height: 100%;
+    margin: 3rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Bottom page */
+.bottom_page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom_page h3{
+    margin: 0;
+}
+
+.bottom_page div{
+    margin-bottom: 1rem;
+}
+
+/* CONTACT */
+
+/* Form */
+#form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 0.5rem;
+    width: 30%;
+}
+
+.input_container label{
+    padding-bottom: 0.5rem;
+}
+
+.input_container textarea{
+    height: 5rem;
+}
+
+#reden{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 0.7rem;
+}
+
+#reden p{
+    margin: 0.6rem 0 0.6rem 0;
+}
+
+#reden button{
+    margin-top: 1rem;
+    width: 100%;
+}
+
+/* Popup */
+.popup_container{
+    position: absolute;
+    z-index: 10000;
+    width: 99%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+
+    pointer-events: none;
+    position: fixed;
+}
+
+/* PHONE SCREEN */
+@media only screen and (max-width: 600px){
+
+    /* COMPONENTS */
+    .btn{
+        font-size: 0.7rem;
+    }
+
+    .nav-btn{
+        font-size: 0.7rem;
+        margin-left: 0.4rem;
+    }
+
+    .card{  
+        width: 42%;
+        height: 15rem;
+        font-size: 1rem;
+        border-radius: 10px;
+        margin: 0.5rem;
+    }
+    
+
+    /* ELEMENTS */
+    .h1{
+        font-size: 2rem;
+    }
+    .h2{
+        font-size: 1.5rem;
+    }
+    .h3{
+        font-size: 1rem;
+    }
+    .body{
+        font-size: 0.75rem;
+    }
+
+    /* MAIN */
+
+    /* Header & Footer */
+    .header{
+        margin: 0.5rem 0.5rem 0 0.5rem;
+    }
+
+    .footer{
+        padding: 0.5rem;
+        margin-top: 1.5rem;
+    }
+
+    /* Title */
+    #title_logo{
+        width: 2.5rem;
+    }
+
+    .title h1{
+        margin-top: -0.5rem;
+    }
+
+    #title_search{
+        display: flex;
+        width: 90%;
+        height: 3rem;
+        padding: 1rem;
+    }
+
+    #title_search input{
+        font-size: 0.7rem;
+    }
+
+    #title-search button{
+        font-size: 0.7rem;
+    }
+
+    /* Cards page */
+    #cards-container{
+        width: 90%;
+        height: 100%;
+        margin: 1.5rem;
+    }
+
+    /* CONTACT */
+    .input_container{
+        width: 80%;
+    }
+
+    #reden{
+        width: 80%;
+    }
+
+    #reden button{
+        font-size: 1rem;
+    }
+}
