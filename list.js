@@ -7,6 +7,7 @@ const LijstNederland = [
 		Kenteken: 'dkflma',
 		Bijzonderheden: 'dklma',
 		Hulpdienst: 'Brandweer',
+		Regio: '4',
 	},
 	{
 		Adres: 'dfam',
@@ -16,6 +17,7 @@ const LijstNederland = [
 		Kenteken: 'fkvm',
 		Bijzonderheden: 'cmk',
 		Hulpdienst: 'Politie',
+		Regio: '2',
 	},
 	{
 		Adres: 'rowp',
@@ -25,13 +27,14 @@ const LijstNederland = [
 		Kenteken: 'tpywi',
 		Bijzonderheden: 'mxvn',
 		Hulpdienst: 'Politie',
+		Regio: '1',
 	},
 ]
 
 const table = document.getElementById('list_table')
-// const button = document.getElementById('search_button')
 const input = document.getElementById('search_input')
 const hulpdienst = document.getElementById('hulpdienst-dropdown')
+const regio = document.getElementById('regios-dropdown')
 
 /**
  * Searches through a dataset of objects for a query string.
@@ -46,9 +49,8 @@ function SearchTable(query, dataset) {
 	return dataset.filter((row) => Object.values(row).some((field) => String(field).toLowerCase().includes(lowerQuery)))
 }
 
-function FilterTable(dataset) {
-	const filter = hulpdienst.value
-	return dataset.filter((item) => filter === 'all' || item.Hulpdienst === filter)
+function FilterTable(dataset, filter, query) {
+	return dataset.filter((item) => filter === 'all' || item[query] === filter)
 }
 
 /**
@@ -78,7 +80,7 @@ function GenerateList(dataset) {
 
 		// Append cells for each object value
 		for (const key in dataset[i]) {
-			if (key === 'Hulpdienst') continue
+			if (key === 'Hulpdienst' || key === 'Regio') continue
 
 			const cell = document.createElement('td')
 			cell.textContent = dataset[i][key]
@@ -91,13 +93,14 @@ function GenerateList(dataset) {
 }
 
 function UpdateList() {
-	console.log(LijstNederland)
-	const filtered = FilterTable(LijstNederland)
-	const result = SearchTable(input.value, filtered)
+	const filtered = FilterTable(LijstNederland, regio.value, 'Regio')
+	const finalFilter = FilterTable(filtered, hulpdienst.value, 'Hulpdienst')
+	const result = SearchTable(input.value, finalFilter)
 	GenerateList(result)
 }
 
 input.addEventListener('input', UpdateList)
+regio.addEventListener('change', UpdateList)
 hulpdienst.addEventListener('change', UpdateList)
 
 UpdateList()
